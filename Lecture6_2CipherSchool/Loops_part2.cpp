@@ -11,7 +11,7 @@ int main()
     // cout<<i<<" "<<j<<" "<<k<<endl;
     // j=i++;
     // cout<<i<<" "<<j<<" "<<k<<endl;
-    // k=++i;    
+    // k=++i;
     // cout<<i<<" "<<j<<" "<<k<<endl;
     // cout<<++i<<endl;
     // for (int i = 0; i < 10; i++)
@@ -19,9 +19,9 @@ int main()
 
     // }
     int i;
-    for(int i=1;i<=100;i++)
+    for (int i = 1; i <= 100; i++) // condition which determnine a loop should run or terminate
     {
-        cout<<i<<" "; // block which gets executed everytime time
+        cout << i << " "; // block which gets executed everytime time
     }
     return 0;
 }
