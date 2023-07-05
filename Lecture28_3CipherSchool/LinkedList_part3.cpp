@@ -15,10 +15,12 @@ public:
 };
 void printnode(node *&node)
 {
-    cout << "Value " << node->data <<"  ";
+    cout << "Value " << node->data << "  ";
     cout << "Address " << node->next << endl;
 }
-void printLinkedList();
+void printLinkedList(node *&head){
+
+};
 int main()
 {
     node *node1 = new node(3);
@@ -32,11 +34,14 @@ int main()
     node1->next = node2;
     node2->next = node3;
 
-    printnode(node1);
-    cout<<endl;
-    printnode(node2);
-    cout<<endl;
-    printnode(node3);
+    // printnode(node1);
+    // cout << endl;
+    // printnode(node2);
+    // cout << endl;
+    // printnode(node3);
+
+    printnode(node1->next);       // node2 = node1->next;
+    printnode(node1->next->next); // node3 = node2->next = node1->next->next
 
     return 0;
 }
