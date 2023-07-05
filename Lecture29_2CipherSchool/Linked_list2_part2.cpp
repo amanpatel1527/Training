@@ -69,8 +69,21 @@ void insertAtEnd(node *&head, int data)
 
 void insertAtMiddle(node *&head, int data, int pos)
 {
+
     node *temp = new node(data);
     node *var = head;
+
+    while(var->data!=pos)
+    {
+        var = var->next;
+        if(var==NULL)
+        {
+            cout<<"The location is not exist"<<endl;
+            return;
+        }
+    }
+
+
     while (var->data != pos)
     {
         var = var->next;
@@ -137,6 +150,9 @@ int main()
 
     cout << "Inserting elements in the middle " << endl;
     insertAtMiddle(head, 6,5);
+    printLinkedList(head);
+    cout<<endl;
+    insertAtMiddle(head, 6,44);
     printLinkedList(head);
     return 0;
 }
