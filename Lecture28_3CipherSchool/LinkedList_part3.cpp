@@ -18,21 +18,44 @@ void printnode(node *&node)
     cout << "Value " << node->data << "  ";
     cout << "Address " << node->next << endl;
 }
-void printLinkedList(node *&head){
+void printLinkedList(node *&head)
+{
+    if (head == NULL)
+    {
+        cout << "The linkedlist is still empty " << endl;
+        return;
+    }
+    node *temp;
+    temp = head;
 
+    while (temp != NULL)
+    {
+        cout << temp->data << "-->";
+    }
 };
 int main()
 {
+
+    // Head of linked list iis nothing but a fancy term to indicate the top or the first node
+    node *head;
+
+    printLinkedList(head);
+
     node *node1 = new node(3);
+    head = node1;
+    printLinkedList(head);
+
     node *node2 = new node(5);
+    node1->next = node2;
+    printLinkedList(head);
+
     node *node3 = new node(7);
+    node2->next = node3;
+    printLinkedList(head);
 
     // printnode(node1);
     // printnode(node2);
     // printnode(node3);
-
-    node1->next = node2;
-    node2->next = node3;
 
     // printnode(node1);
     // cout << endl;
