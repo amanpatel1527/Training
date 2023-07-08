@@ -20,7 +20,11 @@ int queue[1000];
     {
         this->front = 0;
         this->back = -1;
-        this->capacity = 1000
+        this->capacity = 1000;
+    }
+   void enqueue(int data)
+    {
+
     }
 };
 
